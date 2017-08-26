@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import BookList from './BookList';
 import BookForm from './BookForm';
-import DATA from '../data';
+import DATA from './data';
 import style from './style';
 
 class BookBox extends Component {
