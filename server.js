@@ -27,6 +27,25 @@ router.get('/', function(req,res){
   res.json({ message: 'API initialized!' });
 });
 
+router.route('/books').get(function(req,res){
+  Book.find(function(err,books) {
+    if (err)
+    res.send(err);
+    res.json(books)
+  });
+})
+.post(function(req,res) {
+  var book = new Book();
+  book.title = req.body.title;
+  book.author = req.body.author;
+
+  book.save(function(err) {
+    if (err)
+    res.send(err);
+    res.json({ message: 'Book was successfully added!' });
+  });
+});
+
 app.use('/api', router);
 
 app.listen(port, function() {

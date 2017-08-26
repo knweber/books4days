@@ -1,5 +1,5 @@
 const style = {
- bookBox: {
+ BookBox: {
  width:'80vw',
  margin:'0 auto',
  fontFamily:'Helvetica, sans-serif'

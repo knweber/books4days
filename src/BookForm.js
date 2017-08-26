@@ -25,6 +25,9 @@ class BookForm extends Component {
       <input type='text' placeholder="Title" style={ style.bookFormText }
       value= { this.state.title }
       onChange={ this.handleTitleChange } />
+      <input type='text' placeholder="Author" style={ style.bookFormText }
+      value= { this.state.author }
+      onChange={ this.handleAuthorChange } />
       <input type="submit" style={ style.bookFormPost } value="Post" />
       </form>
     )
