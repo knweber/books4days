@@ -1,70 +1,70 @@
 const style = {
  bookBox: {
- width:’80vw’,
- margin:’0 auto’,
- fontFamily:’Helvetica, sans-serif’
+ width:'80vw',
+ margin:'0 auto',
+ fontFamily:'Helvetica, sans-serif'
  },
  title: {
- textAlign:’center’,
- textTransform:’uppercase’
+ textAlign:'center',
+ textTransform:'uppercase'
  },
  BookList: {
- border:’1px solid #f1f1f1',
- padding:’0 12px’,
- maxHeight:’70vh’,
- overflow:’scroll’
+ border:'1px solid #f1f1f1',
+ padding:'0 12px',
+ maxHeight:'70vh',
+ overflow:'scroll'
  },
  Book: {
- backgroundColor:’#fafafa’,
- margin:’10px’,
- padding:’3px 10px’,
- fontSize:’.85rem’
+ backgroundColor:'#fafafa',
+ margin:'10px',
+ padding:'3px 10px',
+ fontSize:'.85rem'
  },
  BookForm: {
- margin:’10px’,
- display:’flex’,
- flexFlow:’row wrap’,
- justifyContent:’space-between’
+ margin:'10px',
+ display:'flex',
+ flexFlow:'row wrap',
+ justifyContent:'space-between'
  },
  BookFormAuthor: {
- minWidth:’150px’,
- margin:’3px’,
- padding:’0 10px’,
- borderRadius:’3px’,
- height:’40px’,
- flex:’2'
+ minWidth:'150px',
+ margin:'3px',
+ padding:'0 10px',
+ borderRadius:'3px',
+ height:'40px',
+ flex:'2'
  },
  BookFormText: {
- flex:’4',
- minWidth:’400px’,
- margin:’3px’,
- padding:’0 10px’,
- height:’40px’,
- borderRadius:’3px’
+ flex:'4',
+ minWidth:'400px',
+ margin:'3px',
+ padding:'0 10px',
+ height:'40px',
+ borderRadius:'3px'
  },
  BookFormPost: {
- minWidth:’75px’,
- flex:’1',
- height:’40px’,
- margin:’5px 3px’,
- fontSize:’1rem’,
- backgroundColor:’#A3CDFD’,
- borderRadius:’3px’,
- color:’#fff’,
- textTransform:’uppercase’,
- letterSpacing:’.055rem’,
- border:’none’
+ minWidth:'75px',
+ flex:'1',
+ height:'40px',
+ margin:'5px 3px',
+ fontSize:'1rem',
+ backgroundColor:'#A3CDFD',
+ borderRadius:'3px',
+ color:'#fff',
+ textTransform:'uppercase',
+ letterSpacing:'.055rem',
+ border:'none'
  },
  updateLink: {
- textDecoration:’none’,
- paddingRight:’15px’,
- fontSize:’.7rem’
+ textDecoration:'none',
+ paddingRight:'15px',
+ fontSize:'.7rem'
  },
  deleteLink: {
- textDecoration:’none’,
- paddingRight:’15px’,
- fontSize:’.7rem’,
- color:’red’
+ textDecoration:'none',
+ paddingRight:'15px',
+ fontSize:'.7rem',
+ color:'red'
  }
 }
 module.exports = style;

@@ -9,6 +9,8 @@ var router = express.Router();
 
 var port = process.env.API_PORT || 3000;
 
+mongoose.connect('mongodb://knweber:Brewers2016@ds159033.mlab.com:59033/booksfordays')
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(function(req,res,next) {

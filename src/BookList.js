@@ -4,10 +4,10 @@ import style from './style';
 
 class BookList extends Component {
   render() {
-    let bookNodes = this.props.data.map(comment => {
+    let bookNodes = this.props.data.map(book => {
       return (
         <Book title={ book.title } author={ book.author } key={ book.id }>
-        { book.title }
+        { book.author }
         </Book>
       )
     })
