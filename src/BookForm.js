@@ -17,6 +17,13 @@ class BookForm extends Component {
   }
   handleSubmit(e){
     e.preventDefault();
+    let title = this.state.title.trim();
+    let author = this.state.author.trim();
+    if (!title || !author) {
+      return;
+    }
+    this.props.onBookSubmit({ title: title, author: author });
+    this.setState({ title: '', author: ''});
     console.log(`${this.state.title} by ${this.state.author}`)
   }
   render() {

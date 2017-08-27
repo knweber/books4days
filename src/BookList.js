@@ -6,7 +6,7 @@ class BookList extends Component {
   render() {
     let bookNodes = this.props.data.map(book => {
       return (
-        <Book title={ book.title } author={ book.author } key={ book.id }>
+        <Book title={ book.title } author={ book.author } key={ book['_id'] }>
         { book.author }
         </Book>
       )
