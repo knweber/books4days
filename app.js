@@ -1,9 +1,11 @@
+var req = require('request');
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var expressValidator = require('express-validator');
 
 var index = require('./routes/index');
 var books = require('./routes/books');
@@ -21,9 +23,37 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(expressValidator());
 
 app.use('/', index);
 app.use('/books', books);
+
+function Goodreads(dev, sec) {
+	this.keys = {
+		'developer' : GOODREADS_KEY,
+		'secret' : GOODREADS_SECRET
+	}
+};
+
+  Goodreads.prototype.getBook = function(title) {
+  	options = {
+  		url : 'https://www.goodreads.com/search/index.xml',
+  		form : {
+        'q': 'Harry Potter',
+  			'key' : this.keys.developer,
+  		}
+  	}
+  	req.get(options, function(err, response, body) {
+  		return response;
+  	});
+  };
+
+app.get('/books', function(err, res){
+  var book = gr.getBook('Harry Potter');
+  console.log(book);
+  res.send(book);
+})
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
